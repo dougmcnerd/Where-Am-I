@@ -17,12 +17,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         checkLocationAuthorizationStatus()
         
         locationManager.delegate = self
-        locationManager.startMonitoringSignificantLocationChanges()
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        // The minimum distance (measured in meters) a device must move horizontally before an update event is generated.
+        locationManager.distanceFilter = 100.0
+        locationManager.startUpdatingLocation()
     }
     
     // override func viewDidAppear(animated: Bool) {
@@ -40,6 +42,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("CLLocationManager failed with error: \(error)")
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locationArray = locations as NSArray
+        let currentLocation = locationArray.lastObject as! CLLocation
+        centerMapOnLocation(currentLocation)
+    }
+    
+    let regionRadius: CLLocationDistance = 2000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
 
 }

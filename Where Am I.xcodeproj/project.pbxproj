@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5B93BAE1BD5B5DF0052F6C3 /* Home.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5B93BAD1BD5B5DF0052F6C3 /* Home.gpx */; settings = {ASSET_TAGS = (); }; };
 		A5FD51761BCFE5A3006614C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FD51751BCFE5A3006614C8 /* AppDelegate.swift */; };
 		A5FD51781BCFE5A3006614C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FD51771BCFE5A3006614C8 /* ViewController.swift */; };
 		A5FD517B1BCFE5A3006614C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FD51791BCFE5A3006614C8 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5B93BAD1BD5B5DF0052F6C3 /* Home.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Home.gpx; sourceTree = "<group>"; };
 		A5FD51721BCFE5A3006614C8 /* Where Am I.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where Am I.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FD51751BCFE5A3006614C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5FD51771BCFE5A3006614C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		A5FD51691BCFE5A3006614C8 = {
 			isa = PBXGroup;
 			children = (
+				A5B93BAD1BD5B5DF0052F6C3 /* Home.gpx */,
 				A5FD518B1BD03566006614C8 /* MapKit.framework */,
 				A5FD51871BD034A0006614C8 /* CoreLocation.framework */,
 				A5FD51741BCFE5A3006614C8 /* Where Am I */,
@@ -134,6 +137,7 @@
 			files = (
 				A5FD51801BCFE5A3006614C8 /* LaunchScreen.storyboard in Resources */,
 				A5FD517D1BCFE5A3006614C8 /* Assets.xcassets in Resources */,
+				A5B93BAE1BD5B5DF0052F6C3 /* Home.gpx in Resources */,
 				A5FD517B1BCFE5A3006614C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +298,7 @@
 				A5FD51861BCFE5A3006614C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
